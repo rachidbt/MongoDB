@@ -1,4 +1,10 @@
 <html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
 <h2>Read Form</h2>
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="GET">
 <p>Car registration plate (Matrícula): <input type="text" name="_id" value="" ></p>
@@ -9,9 +15,10 @@
 
 <input type="submit"><br/><br/><button><a href="createForm.php">Crear</a></button>
 
-<table border="10" align="center">
+<div class="container">
+<table border="10" align="center" class="table">
 
-  <tr>
+  <tr class="success">
 
     <th>ID</th>
 
@@ -46,7 +53,7 @@
     $cars = $collection->find(['_id' => $_id]);
 
     foreach ($cars as $car) {
-      echo "<tr><td>".$car->_id."</td>";
+      echo "<tr ><td>".$car->_id."</td>";
       echo "<td>".$car->doors."</td>";
       echo "<td>".$car->colour."</td>";
       echo "<td>".$car->car_engine."</td>";
@@ -86,6 +93,6 @@
     }
 
     ?>
-
+</div>
 </table>
 </html>

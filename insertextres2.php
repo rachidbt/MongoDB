@@ -13,7 +13,6 @@ if ($_GET["_id"]!=null){
   $conn= new MongoDB\Client("mongodb://localhost:27017");
 
   $db=$conn->carstock;
-  $db=$conn->carstock;
 
   $Resultat =$db->cars->updateOne(['_id' => $_id], ['$push' => ['Extra' => $extra]]);
 }
