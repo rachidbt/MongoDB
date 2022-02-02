@@ -13,7 +13,7 @@
 <p>Engine (Motor): <input type="text" name="engine" value="" ></p><br>
 
 
-<input type="submit"><br/><br/><button><a href="createForm.php">Crear</a></button>
+<input type="submit"><br/><br/>
 
 <div class="container">
 <table border="10" align="center" class="table">
